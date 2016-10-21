@@ -2,7 +2,7 @@
   "name": "webpack_test",
   "version": "1.0.0",
   "description": "frontend dev env test",
-  "main": "./src/js/dc/dc.js",
+  "main": "index.js",
   "scripts": {
     "start": "npm run dev",
     "dev" : "webpack-dev-server --config webpack.config.dev.js --hot --host 0.0.0.0",
