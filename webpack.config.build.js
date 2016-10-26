@@ -1,43 +1,23 @@
-const path = require('path');
 const webpack = require('webpack');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
-    entry: {
-        'js/dc' : './src/js/dc/dc',
-        'js/fc' : './src/js/fc/fc'
-    },
-
-    output: {
-        path: path.join(__dirname, '/public'),
-        filename: '[name].bundle.js'
-    },
-
-    module: {
-        loaders: [
-            {
-                test: /\.js$/,
-                loader: 'babel',
-                exclude: /node_modules/,
-                query: {
-                    cacheDirectory: true,
-                    presets: ['es2015']
-                }
-            },
-
-            {
-                test : /\.handlebars$/,
-                loader : 'handlebars-loader'
-            }
-        ]
-    },
-
     plugins: [
+        new CleanWebpackPlugin([
+            './public/html/*',
+            './public/css/*',
+            './public/js/*'
+        ]),
+
+        new webpack.optimize.DedupePlugin(),
+        new webpack.optimize.OccurenceOrderPlugin(),
+        
         new webpack.optimize.UglifyJsPlugin({
-            compressor: {
+            compress: {
                 warnings: false,
             }
-        }),
+        })
+    ],
 
-        new webpack.optimize.OccurenceOrderPlugin()
-    ]
+    devtool: 'sourceMap'
 };

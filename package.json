@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "npm run dev",
-    "dev" : "webpack-dev-server --config webpack.config.dev.js --hot --host 0.0.0.0",
-    "build" : "webpack --config webpack.config.build.js"
+    "dev": "webpack-dev-server --hot --host 0.0.0.0",
+    "build": "webpack --progress",
+    "ie": "webpack-dev-server --host 0.0.0.0"
   },
   "author": "",
   "license": "ISC",
@@ -14,12 +15,16 @@
     "babel-core": "^6.17.0",
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.16.0",
+    "clean-webpack-plugin": "^0.1.13",
+    "css-loader": "^0.25.0",
+    "extract-text-webpack-plugin": "^1.0.1",
     "handlebars": "^4.0.5",
     "handlebars-loader": "^1.4.0",
+    "html-webpack-plugin": "^2.24.0",
+    "jquery": "^1.11.3",
+    "style-loader": "^0.13.1",
     "webpack": "^1.13.2",
-    "webpack-dev-server": "^1.16.2"
-  },
-  "dependencies": {
-    "webpack": "^1.13.2"
+    "webpack-dev-server": "^1.16.2",
+    "webpack-merge": "^0.15.0"
   }
 }
