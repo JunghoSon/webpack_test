@@ -9,7 +9,6 @@ const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const configBuild = require('./webpack.config.build.js');
 const configDev = require('./webpack.config.dev.js');
 const configDevIe = require('./webpack.config.dev.ie.js');
-
 const target = process.env.npm_lifecycle_event;
 
 const common = {
