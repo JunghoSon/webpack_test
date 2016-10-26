@@ -1,6 +1,5 @@
 const webpack = require('webpack');
 const path = require('path');
-//const argv = require('yargs').argv;
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -78,7 +77,6 @@ const common = {
             filename: 'js/common.js',
             minChunks: Infinity
         }),
-        //new webpack.optimize.CommonsChunkPlugin('css/common.css'),
         
         new HtmlWebpackPlugin({
             filename: 'html/dc.html',
