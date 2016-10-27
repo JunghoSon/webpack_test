@@ -11,12 +11,15 @@ require('../../css/dc.css');
 var $ = require('jquery'),
 	tmpl = require('../../tmpl/dc/dc.handlebars');
 
-var str = tmpl({'test' : 'success!!'});
+var str = tmpl({
+	'page' : 'DC',
+	'state' : 'successfully!!'
+});
 
-$('#test').append(str);
+$('.area_tmpl').append(str);
 
-try{
+/*try{
 	console.log(typeof $, ' : jquery');
 }catch(e){
 	alert(typeof $ + ' : jquery');
-}
+}*/

@@ -5,8 +5,31 @@
 <title>dc</title>
 </head>
 <body>
-<h1>PAGE FC</h1>
-<img src="/images/1.jpg" alt="#" />
-<div class="bg_test"></div>
+
+	<!-- include header -->
+	<div class="header" w3-include-html="/html/include/header.html"></div>
+	<!--// include header -->
+
+	<!-- container -->
+	<div class="container">
+		<div class="content">
+			<div id="test">
+				<p>PAGE FC</p>
+			</div>
+		</div>
+	</div>
+	<!--// container -->
+
+	<!-- include footer -->
+	<div class="footer" w3-include-html="/html/include/footer.html"></div>
+	<!--// include footer -->
+
+	<!-- 퍼블리싱용 include관련 스크립트 -->
+	<script type="text/javascript" src="http://www.w3schools.com/lib/w3data.js"></script>
+	<script type="text/javascript">
+	w3IncludeHTML();
+	</script>
+	<!--// 퍼블리싱용 include관련 스크립트 -->
+
 </body>
 </html>

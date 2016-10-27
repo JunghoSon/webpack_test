@@ -5,6 +5,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const webpackMerge = require('webpack-merge');
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const configBuild = require('./webpack.config.build.js');
 const configDev = require('./webpack.config.dev.js');
@@ -62,6 +63,12 @@ const common = {
         ]
     },
 
+    htmlLoader: {
+        ignoreCustomFragments: [/\{\{.*?}}/],
+        root: path.join(__dirname, '/src'),
+        attrs: ['img:src', 'link:href']
+    },
+
     resolve: {
         extensions: ['', '.js'],
         modulesDirectories: ['node_modules'],
@@ -91,6 +98,11 @@ const common = {
             inject: 'body',
             chunks:['vender','fc']
         }),
+
+        new CopyWebpackPlugin([{
+            from: './html/include/*',
+            fletten: true
+        }]),
 
         new ExtractTextPlugin('css/[name].css', {
             allChunks: true

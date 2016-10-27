@@ -1,13 +1,31 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="utf-8" />
 <title>dc</title>
 </head>
 <body>
-<h1>PAGE DC</h1>
-<div id="test">
-<!-- @replace template -->
-</div>
+
+	<!-- include header -->
+	<div class="header" w3-include-html="/html/include/header.html"></div>
+
+	<div class="container">
+		<div class="content">
+			<div class="area_tmpl">
+				<!-- @replace template -->
+			</div>
+		</div>
+	</div>
+
+	<!-- include footer -->
+	<div class="footer" w3-include-html="/html/include/footer.html"></div>
+
+	<!-- 퍼블리싱용 include관련 스크립트 -->
+	<script type="text/javascript" src="http://www.w3schools.com/lib/w3data.js"></script>
+	<script type="text/javascript">
+	w3IncludeHTML();
+	</script>
+	<!--// 퍼블리싱용 include관련 스크립트 -->
+
 </body>
 </html>
