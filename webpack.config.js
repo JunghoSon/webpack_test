@@ -86,15 +86,15 @@ const common = {
         }),
         
         new HtmlWebpackPlugin({
-            filename: 'html/dc.html',
-            template: './html/dc.html',
+            filename: 'html/dc/dc.html',
+            template: './html/dc/dc.html',
             inject: 'body',
             chunks:['vender','dc']
         }),
 
         new HtmlWebpackPlugin({
-            filename: 'html/fc.html',
-            template: './html/fc.html',
+            filename: 'html/fc/fc.html',
+            template: './html/fc/fc.html',
             inject: 'body',
             chunks:['vender','fc']
         }),

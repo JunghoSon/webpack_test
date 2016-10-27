@@ -16,5 +16,6 @@ module.exports = {
         }
     },
 
-    devtool: 'eval'
+    devtool: 'inline-source-map'
+    //devtool: 'eval'
 };
